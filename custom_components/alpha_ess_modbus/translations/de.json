@@ -1,0 +1,75 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Verbinde dich mit deinem Alpha ESS Wechselrichter über lokales Modbus TCP.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "slave_id": "Modbus Slave-ID",
+          "name": "Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung fehlgeschlagen",
+      "unknown": "Unerwarteter Fehler"
+    },
+    "abort": {
+      "already_configured": "Gerät ist bereits konfiguriert"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Abfrageintervall (Sekunden)",
+          "charge_block_duration": "Dauer Ladesperre (Sekunden)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "inverter_work_mode": {
+        "state": {
+          "wait": "Warten",
+          "online": "Online",
+          "ups": "UPS",
+          "bypass": "Bypass",
+          "fault": "Fehler",
+          "dc": "DC",
+          "selftest": "Selbsttest",
+          "check": "Prüfung",
+          "update_master": "Update Master",
+          "update_slave": "Update Slave",
+          "update_arm": "Update ARM"
+        }
+      },
+      "battery_relay_status": {
+        "state": {
+          "disconnected": "Relais getrennt",
+          "discharge_only": "Entladerelais geschlossen",
+          "charge_only": "Laderelais geschlossen",
+          "both": "Lade- und Entladerelais geschlossen"
+        }
+      }
+    },
+    "select": {
+      "dispatch_mode": {
+        "state": {
+          "battery_pv_only": "Batterie lädt nur aus PV",
+          "soc_control": "State-of-Charge-Steuerung",
+          "load_following": "Lastfolge",
+          "maximise_output": "Ausgabe maximieren",
+          "normal": "Normalbetrieb",
+          "optimise_consumption": "Eigenverbrauch optimieren",
+          "maximise_consumption": "Verbrauch maximieren",
+          "eco": "ECO-Modus",
+          "pv_power_setting": "PV-Leistungseinstellung",
+          "no_battery_charge": "Kein Batterieladen"
+        }
+      }
+    }
+  }
+}

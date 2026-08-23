@@ -1,0 +1,10 @@
+{
+  "domain": "alpha_ess_modbus",
+  "name": "Alpha ESS Modbus",
+  "codeowners": ["@mike1703"],
+  "config_flow": true,
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "requirements": ["pymodbus==3.13.1"],
+  "version": "1.0.0"
+}

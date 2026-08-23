@@ -1,0 +1,75 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Connect to your Alpha ESS inverter via local Modbus TCP.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "slave_id": "Modbus slave ID",
+          "name": "Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Poll interval (seconds)",
+          "charge_block_duration": "Charge block duration (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "inverter_work_mode": {
+        "state": {
+          "wait": "Wait",
+          "online": "Online",
+          "ups": "UPS",
+          "bypass": "Bypass",
+          "fault": "Fault",
+          "dc": "DC",
+          "selftest": "Self test",
+          "check": "Check",
+          "update_master": "Update master",
+          "update_slave": "Update slave",
+          "update_arm": "Update ARM"
+        }
+      },
+      "battery_relay_status": {
+        "state": {
+          "disconnected": "Relays disconnected",
+          "discharge_only": "Discharge relay closed",
+          "charge_only": "Charge relay closed",
+          "both": "Charge and discharge relays closed"
+        }
+      }
+    },
+    "select": {
+      "dispatch_mode": {
+        "state": {
+          "battery_pv_only": "Battery only charges from PV",
+          "soc_control": "State of charge control",
+          "load_following": "Load following",
+          "maximise_output": "Maximise output",
+          "normal": "Normal mode",
+          "optimise_consumption": "Optimise consumption",
+          "maximise_consumption": "Maximise consumption",
+          "eco": "ECO mode",
+          "pv_power_setting": "PV power setting",
+          "no_battery_charge": "No battery charge"
+        }
+      }
+    }
+  }
+}
